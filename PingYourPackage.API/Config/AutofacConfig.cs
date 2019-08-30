@@ -10,23 +10,25 @@ using System.Web.Http;
 
 namespace PingYourPackage.API.Config
 {
-    class AutofacConfig
+    public class AutofacConfig
     {
-        public static void Initialize(HttpConfiguration config, IContainer container)
+        public static void Initialize(HttpConfiguration config)
         {
+            IContainer container = RegisterServicesControllers();
             config.DependencyResolver = new AutofacWebApiDependencyResolver(container);
         }
 
-        private static IContainer RegisterServices(ContainerBuilder builder)
-        {
-            builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
-            return builder.Build();
-        }
-
-        public static void Initialize(HttpConfiguration config)
+        /// <summary>
+        /// Register types that implement System.Web.Http.Controllers.IHttpController in the ExecutingAssembly.
+        /// </summary>
+        /// <param name="builder"></param>
+        /// <returns></returns>
+        private static IContainer RegisterServicesControllers()
         {
             ContainerBuilder containerBuilder = new ContainerBuilder();
-            Initialize(config, RegisterServices(containerBuilder));
+            containerBuilder.RegisterApiControllers(Assembly.GetExecutingAssembly());
+            IContainer container = containerBuilder.Build();
+            return container;
         }
     }
 }

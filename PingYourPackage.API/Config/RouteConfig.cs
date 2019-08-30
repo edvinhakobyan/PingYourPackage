@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace PingYourPackage.API.Config
 {
-    class RouteConfig
+    public class RouteConfig
     {
+
     }
 }

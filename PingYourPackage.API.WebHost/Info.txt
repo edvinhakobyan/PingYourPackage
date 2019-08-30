@@ -1,0 +1,10 @@
+﻿Install-Package Microsoft.AspNet.WebApi.Core -ProjectName PingYourPackage.API
+Install-Package Autofac.WebApi -ProjectName PingYourPackage.API
+
+Install-Package xunit -ProjectName PingYourPackage.API.Test
+Install-Package Moq -ProjectName PingYourPackage.API.Test
+Install-Package Microsoft.AspNet.WebApi.Core -ProjectName PingYourPackage.API.Test
+Get-Package -ProjectName PingYourPackage.API.Test
+
+Install-Package Microsoft.AspNet.WebApi.WebHost -Version 5.2.7
+Install-Package EntityFramework
