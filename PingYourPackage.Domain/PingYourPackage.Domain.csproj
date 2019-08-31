@@ -48,15 +48,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IEntity.cs" />
+    <Compile Include="Entitys\Affiliate.cs" />
+    <Compile Include="EntitiesContext.cs" />
+    <Compile Include="Entitys\IEntity.cs" />
+    <Compile Include="Entitys\ShipmentState.cs" />
+    <Compile Include="Migrations\201908311424354_Init.cs" />
+    <Compile Include="Migrations\201908311424354_Init.Designer.cs">
+      <DependentUpon>201908311424354_Init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908311544250_Chenge1.cs" />
+    <Compile Include="Migrations\201908311544250_Chenge1.Designer.cs">
+      <DependentUpon>201908311544250_Chenge1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908311618030_Chenge2.cs" />
+    <Compile Include="Migrations\201908311618030_Chenge2.Designer.cs">
+      <DependentUpon>201908311618030_Chenge2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Role.cs" />
-    <Compile Include="User.cs" />
-    <Compile Include="UserInRole.cs" />
+    <Compile Include="Entitys\Role.cs" />
+    <Compile Include="Entitys\ShipmentType.cs" />
+    <Compile Include="Entitys\User.cs" />
+    <Compile Include="Entitys\UserInRole.cs" />
+    <Compile Include="Entitys\Shipment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201908311424354_Init.resx">
+      <DependentUpon>201908311424354_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908311544250_Chenge1.resx">
+      <DependentUpon>201908311544250_Chenge1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908311618030_Chenge2.resx">
+      <DependentUpon>201908311618030_Chenge2.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

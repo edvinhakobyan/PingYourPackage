@@ -43,6 +43,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -85,6 +91,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EFConfig.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -103,6 +110,10 @@
     <ProjectReference Include="..\PingYourPackage.API\PingYourPackage.API.csproj">
       <Project>{64fba5d0-2927-45ab-b1b6-88104e45e9e8}</Project>
       <Name>PingYourPackage.API</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PingYourPackage.Domain\PingYourPackage.Domain.csproj">
+      <Project>{0c12fabf-61b9-419e-930e-bc12439c9ca2}</Project>
+      <Name>PingYourPackage.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

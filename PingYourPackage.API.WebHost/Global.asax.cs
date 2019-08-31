@@ -14,11 +14,11 @@ namespace PingYourPackage.API.WebHost
 
         protected void Application_Start(object sender, EventArgs e)
         {
-
-            var config = GlobalConfiguration.Configuration;
-            RouteConfig.RegisterRoutes(config);
-            WebAPIConfig.Configure(config);
-            AutofacConfig.Initialize(config);
+            EFConfig.Initialize();
+            //var config = GlobalConfiguration.Configuration;
+            //AutofacConfig.Initialize(config);
+            //RouteConfig.RegisterRoutes(config);
+            //WebAPIConfig.Configure(config);
 
         }
 
