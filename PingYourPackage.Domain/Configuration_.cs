@@ -3,13 +3,11 @@ namespace PingYourPackage.Domain.Migrations
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
-    using System.Drawing;
     using System.Linq;
-    using System.Linq.Expressions;
 
-    public sealed class Configuration : DbMigrationsConfiguration<EntitiesContext>
+    public sealed class Configuration_ : DbMigrationsConfiguration<EntitiesContext>
     {
-        public Configuration()
+        public Configuration_()
         {
             AutomaticMigrationsEnabled = false;
         }

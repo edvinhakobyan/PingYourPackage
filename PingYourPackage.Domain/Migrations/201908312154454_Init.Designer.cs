@@ -13,7 +13,7 @@ namespace PingYourPackage.Domain.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201908311424354_Init"; }
+            get { return "201908312154454_Init"; }
         }
         
         string IMigrationMetadata.Source
