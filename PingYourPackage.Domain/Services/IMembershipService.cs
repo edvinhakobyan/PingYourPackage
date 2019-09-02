@@ -16,6 +16,12 @@ namespace PingYourPackage.Domain.Services
         bool ChengePassword(string userName, string oldPassword, string newPassword);
         bool AddToRole(Guid userKey, string role);
         bool AddToRole(string userName, string role);
-
+        bool RemoveFromRole(string userName, string rele);
+        IEnumerable<Role> GetRols();
+        Role GetRole(Guid key);
+        Role GetRole(string name);
+        PaginatedList<UserWithRoles> GetUsers(int pageIndex, int pageSize);
+        UserWithRoles GetUser(Guid key);
+        UserWithRoles GetUser(string name);
     }
 }
