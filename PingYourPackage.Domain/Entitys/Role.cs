@@ -4,22 +4,15 @@ using System.ComponentModel.DataAnnotations;
 
 namespace PingYourPackage.Domain
 {
-    public class User : IEntity
+    public class Role : IEntity
     {
         [Key]
         public Guid Key { get; set; }
         [Required]
+        [StringLength(50)]
         public string Name { get; set; }
-        public string Email { get; set; }
-        [Required]
-        public string HashedPassword { get; set; }
-        [Required]
-        public string Salt { get; set; }
-        public bool IsLocked { get; set; }
-        public DateTime CreatedOn { get; set; }
-        public DateTime? LastUpdatedOn { get; set; }
         public virtual ICollection<UserInRole> UserInRoles { get; set; }
-        public User()
+        public Role()
         {
             UserInRoles = new HashSet<UserInRole>();
         }

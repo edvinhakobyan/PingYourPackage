@@ -8,3 +8,6 @@ Get-Package -ProjectName PingYourPackage.API.Test
 
 Install-Package Microsoft.AspNet.WebApi.WebHost -Version 5.2.7
 Install-Package EntityFramework
+
+Enable-Migrations -StartUpProjectName PingYourPackage.API.WebHost
+Add-Migration -Name "Init" -StartUpProjectName PingYourPackage.API.WebHost

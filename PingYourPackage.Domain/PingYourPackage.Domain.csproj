@@ -40,6 +40,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,15 +49,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IEntity.cs" />
+    <Compile Include="EntityRepository.cs" />
+    <Compile Include="IQueryableExtensions.cs" />
+    <Compile Include="Migrations\201908312154454_Init.cs" />
+    <Compile Include="Migrations\201908312154454_Init.Designer.cs">
+      <DependentUpon>201908312154454_Init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="PaginatedList.cs" />
+    <Compile Include="Entitys\Affiliate.cs" />
+    <Compile Include="EntitiesContext.cs" />
+    <Compile Include="Entitys\IEntity.cs" />
+    <Compile Include="Entitys\ShipmentState.cs" />
+    <Compile Include="IEntityRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Role.cs" />
-    <Compile Include="User.cs" />
-    <Compile Include="UserInRole.cs" />
+    <Compile Include="Entitys\Role.cs" />
+    <Compile Include="Entitys\ShipmentType.cs" />
+    <Compile Include="Entitys\User.cs" />
+    <Compile Include="Entitys\UserInRole.cs" />
+    <Compile Include="Entitys\Shipment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201908312154454_Init.resx">
+      <DependentUpon>201908312154454_Init.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
