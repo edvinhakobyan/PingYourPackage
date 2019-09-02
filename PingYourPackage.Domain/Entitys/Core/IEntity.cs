@@ -2,7 +2,7 @@
 
 namespace PingYourPackage.Domain
 {
-    interface IEntity
+    public interface IEntity
     {
         Guid Key { get; set; }
     }

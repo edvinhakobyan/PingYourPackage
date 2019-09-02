@@ -18,7 +18,6 @@ namespace PingYourPackage.Domain
             _dbContext = dbContext ?? throw new ArgumentNullException("entitiesContext");
         }
 
-        public IQueryable<T> All => GetAll();
 
         public void Add(T entity)
         {
@@ -78,5 +77,7 @@ namespace PingYourPackage.Domain
             query = (predicate == null) ? query : query.Where(predicate);
             return query.ToPaginatedList(pageIndex, pageSize);
         }
+
+        public IQueryable<T> All => GetAll();
     }
 }

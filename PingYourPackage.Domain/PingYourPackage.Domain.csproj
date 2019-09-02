@@ -49,25 +49,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EntityRepository.cs" />
-    <Compile Include="IQueryableExtensions.cs" />
+    <Compile Include="Entitys\Core\EntityRepository.cs" />
+    <Compile Include="Entitys\Extensions\IQueryableExtensions.cs" />
     <Compile Include="Migrations\201908312154454_Init.cs" />
     <Compile Include="Migrations\201908312154454_Init.Designer.cs">
       <DependentUpon>201908312154454_Init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="PaginatedList.cs" />
+    <Compile Include="Entitys\Core\PaginatedList.cs" />
     <Compile Include="Entitys\Affiliate.cs" />
-    <Compile Include="EntitiesContext.cs" />
-    <Compile Include="Entitys\IEntity.cs" />
+    <Compile Include="Entitys\Core\EntitiesContext.cs" />
+    <Compile Include="Entitys\Core\IEntity.cs" />
     <Compile Include="Entitys\ShipmentState.cs" />
-    <Compile Include="IEntityRepository.cs" />
+    <Compile Include="Entitys\Core\IEntityRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entitys\Role.cs" />
     <Compile Include="Entitys\ShipmentType.cs" />
     <Compile Include="Entitys\User.cs" />
     <Compile Include="Entitys\UserInRole.cs" />
     <Compile Include="Entitys\Shipment.cs" />
+    <Compile Include="Entitys\Extensions\UserRepositoryExtensions.cs" />
+    <Compile Include="Entitys\Extensions\RoleRepositoryExtentions.cs" />
+    <Compile Include="Services\CryptoService.cs" />
+    <Compile Include="Services\ICryptoService.cs" />
+    <Compile Include="Services\IMembershipService.cs" />
+    <Compile Include="Services\MembershipService.cs" />
+    <Compile Include="Services\OperationResult.cs" />
+    <Compile Include="Services\UserWithRoles.cs" />
+    <Compile Include="Services\ValidUserContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -78,5 +87,6 @@
       <DependentUpon>201908312154454_Init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
