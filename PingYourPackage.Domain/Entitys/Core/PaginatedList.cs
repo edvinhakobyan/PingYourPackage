@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PingYourPackage.Domain
+namespace PingYourPackage.Domain.Entitys.Core
 {
     public class PaginatedList<T> : List<T>
     {

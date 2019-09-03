@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Principal;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Security.Principal;
 
-namespace PingYourPackage.Domain.Services
+namespace PingYourPackage.Domain.Services.Interfaces
 {
     public class ValidUserContext
     {

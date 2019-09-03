@@ -1,8 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
+using PingYourPackage.Domain.Entitys.Core;
 using System.ComponentModel.DataAnnotations;
 
-namespace PingYourPackage.Domain
+
+namespace PingYourPackage.Domain.Entitys
 {
     public class UserInRole : IEntity
     {

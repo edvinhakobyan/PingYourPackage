@@ -4,9 +4,9 @@ using System.Text;
 
 namespace PingYourPackage.Domain.Services
 {
-    class CryptoService : ICryptoService
+    public class CryptoService : ICryptoService
     {
-        public string EncryptPasword(string password, string salt)
+        public string EncryptPassword(string password, string salt)
         {
             if (string.IsNullOrEmpty(password))
                 throw new ArgumentNullException("password");

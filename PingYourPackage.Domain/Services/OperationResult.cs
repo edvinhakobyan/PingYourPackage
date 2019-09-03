@@ -12,12 +12,12 @@ namespace PingYourPackage.Domain.Services
         {
             IsSuccsess = isSuccsess;
         }
-        public bool IsSuccsess { get; set }
+        public bool IsSuccsess { get; set; }
     }
 
     public class OperationResult<TEntyty> : OperationResult
     {
-        public TEntyty Entyty;
+        public TEntyty Entity;
         public OperationResult(bool isSuccsess) : base(isSuccsess) { }
     }
 

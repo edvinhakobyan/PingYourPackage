@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using PingYourPackage.Domain.Entitys.Extensions;
+using System;
 using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace PingYourPackage.Domain
+namespace PingYourPackage.Domain.Entitys.Core
 {
     class EntityRepository<T> : IEntityRepository<T> where T : class, IEntity, new()
     {

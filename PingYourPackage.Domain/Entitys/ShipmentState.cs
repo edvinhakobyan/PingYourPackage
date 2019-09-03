@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
+using PingYourPackage.Domain.Entitys.Core;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace PingYourPackage.Domain
+namespace PingYourPackage.Domain.Entitys
 {
     public class ShipmentState : IEntity
     {
