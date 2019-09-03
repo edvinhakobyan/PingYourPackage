@@ -1,11 +1,9 @@
 namespace PingYourPackage.Domain.Migrations
 {
     using System;
-    using System.Data.Entity;
+    using PingYourPackage.Domain.Entitys;
+    using PingYourPackage.Domain.Entitys.Core;
     using System.Data.Entity.Migrations;
-    using System.Drawing;
-    using System.Linq;
-    using System.Linq.Expressions;
 
     public sealed class Configuration : DbMigrationsConfiguration<EntitiesContext>
     {

@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 
 namespace PingYourPackage.Domain.Entitys.Core
 {
-    class EntityRepository<T> : IEntityRepository<T> where T : class, IEntity, new()
+    public class EntityRepository<T> : IEntityRepository<T> where T : class, IEntity, new()
     {
         readonly DbContext _dbContext;
 

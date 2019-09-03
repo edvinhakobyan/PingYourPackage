@@ -7,7 +7,7 @@ namespace PingYourPackage.API.Config
         public static void RegisterRoutes(HttpRouteCollection routeCollection)
         {
             routeCollection.MapHttpRoute(name: "DefaultHttpRoute",
-                                         routeTemplate: "api/{controller/{key}",
+                                         routeTemplate: "api/{controller}/{key}",
                                          defaults: new { key = RouteParameter.Optional },
                                          constraints: new { key = new GuidRouteConstraint() });
         }

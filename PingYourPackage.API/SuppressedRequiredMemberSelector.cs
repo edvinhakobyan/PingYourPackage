@@ -1,7 +1,7 @@
 ﻿using System.Net.Http.Formatting;
 using System.Reflection;
 
-namespace PingYourPackage.API.Config
+namespace PingYourPackage.API
 {
     internal class SuppressedRequiredMemberSelector : IRequiredMemberSelector
     {

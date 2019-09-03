@@ -17,11 +17,10 @@ namespace PingYourPackage.API.WebHost
         {
  
             EFConfig.Initialize();
-            //var config = GlobalConfiguration.Configuration;
-            //AutofacConfig.Initialize(config);
-            //RouteConfig.RegisterRoutes(config);
-            //WebAPIConfig.Configure(config);
-
+            var config = GlobalConfiguration.Configuration;
+            WebAPIConfig.Configure(config);
+            RouteConfig.RegisterRoutes(config.Routes);
+            AutofacWebAPI.Initialize(config);
         }
 
         protected void Session_Start(object sender, EventArgs e)
