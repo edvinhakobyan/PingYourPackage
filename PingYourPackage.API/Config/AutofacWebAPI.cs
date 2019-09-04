@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using PingYourPackage.Domain.Entitys;
 using PingYourPackage.Domain.Entitys.Core;
 using PingYourPackage.Domain.Services;
 using PingYourPackage.Domain.Services.Interfaces;

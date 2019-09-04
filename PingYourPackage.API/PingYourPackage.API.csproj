@@ -60,8 +60,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config\AutoFacDependencyScope.cs" />
     <Compile Include="Config\AutofacWebAPI.cs" />
-    <Compile Include="Config\AutofacWebApiDependencyResolver1.cs" />
+    <Compile Include="Config\AutofacWebApiDependencyResolver_.cs" />
     <Compile Include="Config\RouteConfig.cs" />
     <Compile Include="SuppressedRequiredMemberSelector.cs" />
     <Compile Include="Config\WebAPIConfig.cs" />

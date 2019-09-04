@@ -1,12 +1,11 @@
 ﻿using PingYourPackage.API.Config;
+using PingYourPackage.Domain.Entitys;
+using PingYourPackage.Domain.Entitys.Core;
+using PingYourPackage.Domain.Services;
+using PingYourPackage.Domain.Services.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
 using System.Web;
 using System.Web.Http;
-using System.Web.Security;
-using System.Web.SessionState;
 
 namespace PingYourPackage.API.WebHost
 {
@@ -21,6 +20,14 @@ namespace PingYourPackage.API.WebHost
             WebAPIConfig.Configure(config);
             RouteConfig.RegisterRoutes(config.Routes);
             AutofacWebAPI.Initialize(config);
+
+            using (var v = config.DependencyResolver.BeginScope())
+            {
+               var ey = v.GetService(typeof(IMembershipService)); 
+            }
+
+
+
         }
 
         protected void Session_Start(object sender, EventArgs e)
