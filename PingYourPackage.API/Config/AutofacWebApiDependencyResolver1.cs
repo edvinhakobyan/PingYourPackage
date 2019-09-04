@@ -8,12 +8,12 @@ using System.Web.Http.Dependencies;
 
 namespace PingYourPackage.API.Config
 {
-    public class AutofacWebApiDependencyResolver : IDependencyResolver, IDependencyScope, IDisposable
+    public class AutofacWebApiDependencyResolver1 : IDependencyResolver, IDependencyScope, IDisposable
     {
 
         public ILifetimeScope _ILifetimeScope { get; }
 
-        public AutofacWebApiDependencyResolver(IContainer container)
+        public AutofacWebApiDependencyResolver1(IContainer container)
         {
             _ILifetimeScope = container.BeginLifetimeScope();
         }
