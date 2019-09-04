@@ -15,6 +15,11 @@ namespace PingYourPackage.API.Config
     {
         public static void Configure(HttpConfiguration config)
         {
+
+            // Message Handlers
+            config.MessageHandlers.Add(new RequireHttpsMessageHandler());
+
+            // Formatters
             var jqueryFormatter = config.Formatters.FirstOrDefault(t => t.GetType() == typeof(JQueryMvcFormUrlEncodedFormatter));
             config.Formatters.Remove(config.Formatters.FormUrlEncodedFormatter);
             config.Formatters.Remove(jqueryFormatter);
@@ -26,7 +31,6 @@ namespace PingYourPackage.API.Config
 
             //Default Services
             config.Services.Replace(typeof(IContentNegotiator), new DefaultContentNegotiator(true));
-
             config.Services.RemoveAll(typeof(ModelValidatorProvider),   validator => !(validator is DataAnnotationsModelValidatorProvider));
 
         }

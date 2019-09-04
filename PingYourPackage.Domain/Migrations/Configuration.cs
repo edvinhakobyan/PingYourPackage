@@ -18,6 +18,9 @@ namespace PingYourPackage.Domain.Migrations
             new Role { Key = Guid.NewGuid(), Name = "Admin" },
             new Role { Key = Guid.NewGuid(), Name = "Employee" },
             new Role { Key = Guid.NewGuid(), Name = "Affiliate" });
+
+            //=================================================================================================================
+
         }
     }
 }

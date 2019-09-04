@@ -1,14 +1,11 @@
 ﻿using Autofac;
-using PingYourPackage.Domain.Entitys;
+using Autofac.Integration.WebApi;
 using PingYourPackage.Domain.Entitys.Core;
 using PingYourPackage.Domain.Services;
 using PingYourPackage.Domain.Services.Interfaces;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Reflection;
 using System.Web.Http;
-using System.Web.Http.Dependencies;
 
 namespace PingYourPackage.API.Config
 {
